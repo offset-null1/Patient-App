@@ -100,7 +100,14 @@
         </nav>
 	</header>
 	<!-- End header -->
-	
+	{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+
 	<!-- Start Banner -->
 	<div class="ulockd-home-slider">
 		<div class="container-fluid">
@@ -315,30 +322,83 @@
                         <div class="well-title">
                             <h2>Book an Appointment</h2>
                         </div>
-                        <form>
+                        <form method="POST">
+							{% csrf_token %}
+							{% load crispy_forms_tags %}
                             <!-- Form start -->
                             <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label class="control-label" for="name">Name</label>
+                                <div class="col-md-12">
+									{{ form|crispy }}
+								</div>
+                            </div>
+                                    <!-- <div class="form-group">
+                                        <label class="control-label" for="name">First Name</label>
                                         <input id="name" name="name" type="text" placeholder="Name" class="form-control input-md">
                                     </div>
-                                </div>
-                                <!-- Text input-->
+								</div>
+									<div class="col-md-6">
+										<div class="form-group">
+											<label class="control-label" for="name">Last Name</label>
+											<input id="name" name="name" type="text" placeholder="Name" class="form-control input-md">
+										</div>
+									</div>
+                            </div>
+
+							<div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label class="control-label" for="email">Email</label>
-                                        <input id="email" name="email" type="text" placeholder="E-Mail" class="form-control input-md">
+                                        <label class="control-label" for="email">Gender</label>
+                                        <select id="time" name="time" class="form-control">
+                                            <option value="Male">Male</option>
+                                            <option value="Female">Female</option>
+                                            <option value="Others">Others</option>
+                                        </select>
                                     </div>
-                                </div>
-                                <!-- Text input-->
-                                <div class="col-md-6">
+								</div>
+								
+									<div class="col-md-6">
+                                	    <div class="form-group">
+                                	        <label class="control-label" for="name">Age</label>
+                                	        <input id="name" name="name" type="text" placeholder="Name" class="form-control input-md">
+                                	    </div>
+									</div>
+								
+									<div class="col-md-12">
+										<div class="form-group">
+											<label class="control-label" for="appointmentfor">Disease Department</label>
+											<select id="appointmentfor" name="appointmentfor" class="form-control">
+												<option value="Choose Department">Choose Department</option>
+												<option value="Gynacology">Gynacology</option>
+												<option value="Dermatologist">Dermatologist</option>
+												<option value="Orthology">Orthology</option>
+												<option value="Anesthesiology">Anesthesiology</option>
+												<option value="Ayurvedic">Ayurvedic</option>
+											</select>
+										</div>
+									</div>
+								
+								<div class="col-md-12">
                                     <div class="form-group">
-                                        <label class="control-label" for="date">Preferred Date</label>
+                                        <label class="control-label" for="name">Doctor's Name</label>
+                                        <input id="name" name="name" type="text" placeholder="Name" class="form-control input-md">
+                                    </div>
+								</div>
+								
+								<div class="col-md-12">
+                                    <div class="form-group">
+                                        <label class="control-label" for="name">Fees</label>
+                                        <input id="name" name="name" type="text" placeholder="Name" class="form-control input-md">
+                                    </div>
+								</div>
+								]
+								
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label class="control-label" for="date">Medication started on date</label>
                                         <input id="date" name="date" type="text" placeholder="Preferred Date" class="form-control input-md">
                                     </div>
-                                </div>
-                                <!-- Select Basic -->
+                                </div> -->
+                                <!-- Select Basic
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label class="control-label" for="time">Preferred Time</label>
@@ -348,25 +408,12 @@
                                             <option value="10:00 to 1:00">10:00 to 1:00</option>
                                         </select>
                                     </div>
-                                </div>
-                                <!-- Select Basic -->
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <label class="control-label" for="appointmentfor">Department</label>
-                                        <select id="appointmentfor" name="appointmentfor" class="form-control">
-                                            <option value="Choose Department">Choose Department</option>
-											<option value="Gynacology">Gynacology</option>
-											<option value="Dermatologist">Dermatologist</option>
-											<option value="Orthology">Orthology</option>
-											<option value="Anesthesiology">Anesthesiology</option>
-											<option value="Ayurvedic">Ayurvedic</option>
-                                        </select>
-                                    </div>
-                                </div>
+                                </div> -->
+                            
                                 <!-- Button -->
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <button id="singlebutton" name="singlebutton" class="new-btn-d br-2">Make An Appointment</button>
+                                        <button id="singlebutton" name="singlebutton" class="new-btn-d br-2">Submit</button>
                                     </div>
                                 </div>
                             </div>
