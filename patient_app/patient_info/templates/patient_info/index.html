@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
  
      <!-- Site Metas -->
-    <title>Health Lab - Responsive HTML5 Template</title>  
+    <title>Health Lab </title>  
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -36,7 +36,7 @@
 
 </head>
 <body id="home" data-spy="scroll" data-target="#navbar-wd" data-offset="98">
-
+	{% include 'patient_info/message.html' %}
 	<!-- LOADER -->
      <!-- <div id="preloader">
 		<div class="loader">
@@ -51,7 +51,7 @@
 			<div class="row">
 				<div class="col-lg-6">
 					<div class="left-top">
-						<a class="new-btn-d br-2" href="#"><span>Book Appointment</span></a>
+						<a class="new-btn-d br-2" href="#"><span>Register</span></a>
 						<div class="mail-b"><a href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i> demo@gmail.com</a></div>
 					</div>
 				</div>
@@ -89,10 +89,9 @@
                         <li><a class="nav-link active" href="#home">Home</a></li>
                         <li><a class="nav-link" href="#about">About Us</a></li>
                         <li><a class="nav-link" href="#services">Services</a></li>
-						<li><a class="nav-link" href="#appointment">Appointment</a></li>
+						<li><a class="nav-link" href="#appointment">Register</a></li>
                         <li><a class="nav-link" href="#gallery">Gallery</a></li>
 						<li><a class="nav-link" href="#team">Doctor</a></li>
-                        <li><a class="nav-link" href="#blog">Blog</a></li>
 						<li><a class="nav-link" href="#contact">Contact</a></li>
                     </ul>
                 </div>
@@ -100,13 +99,6 @@
         </nav>
 	</header>
 	<!-- End header -->
-	{% if messages %}
-<ul class="messages">
-    {% for message in messages %}
-    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
-    {% endfor %}
-</ul>
-{% endif %}
 
 	<!-- Start Banner -->
 	<div class="ulockd-home-slider">
@@ -118,7 +110,6 @@
 						<div class="lbox-caption pogoSlider-slide-element">
 							<div class="lbox-details">
 								<h1>Welcome to Health Lab</h1>
-								<p>Fusce convallis ante id purus sagittis malesuada. Sed erat ipsum </p>
 								<a href="#" class="btn">Contact Us</a>
 							</div>
 						</div>
@@ -127,8 +118,7 @@
 						<div class="lbox-caption pogoSlider-slide-element">
 							<div class="lbox-details">
 								<h1>We are Expert in The Field of Health Lab</h1>
-								<p>Fusce convallis ante id purus sagittis malesuada. Sed erat ipsum</p>
-								<a href="#appointment" class="btn">Appointment</a>
+								<a href="#appointment" class="btn">Register</a>
 							</div>
 						</div>
 					</div>
@@ -136,7 +126,6 @@
 						<div class="lbox-caption pogoSlider-slide-element">
 							<div class="lbox-details">
 								<h1>Welcome to Health Lab</h1>
-								<p>Fusce convallis ante id purus sagittis malesuada. Sed erat ipsum </p>
 								<a href="#" class="btn">Contact Us</a>
 							</div>
 						</div>
@@ -156,7 +145,6 @@
 					<div class="col-lg-12">
 						<div class="title-box">
 							<h2>About Us</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
 						</div>
 					</div>
 				</div>
@@ -165,8 +153,6 @@
 						<div class="row align-items-center about-main-info">
 							<div class="col-lg-6 col-md-6 col-sm-12">
 								<h2> Welcome to Health Lab </h2>
-								<p>Fusce convallis ante id purus sagittis malesuada. Sed erat ipsum, suscipit sit amet auctor quis, vehicula ut leo. Maecenas felis nulla, tincidunt ac blandit a, consectetur quis elit. Nulla ut magna eu purus cursus sagittis. Praesent fermentum tincidunt varius. Proin sit amet tempus magna. Fusce pellentesque vulputate urna. </p>
-								<p>Fusce convallis ante id purus sagittis malesuada. Sed erat ipsum, suscipit sit amet auctor quis, vehicula ut leo. Maecenas felis nulla, tincidunt ac blandit a, consectetur quis elit. Nulla ut magna eu purus cursus sagittis. Praesent fermentum tincidunt varius. Proin sit amet tempus magna. Fusce pellentesque vulputate urna. </p>
 								<a href="#" class="new-btn-d br-2">Read More</a>
 							</div>
 							<div class="col-lg-6 col-md-6 col-sm-12">
@@ -200,7 +186,6 @@
 				<div class="col-lg-12">
 					<div class="title-box">
 						<h2>Services</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
 					</div>
 				</div>
 			</div>
@@ -213,7 +198,7 @@
 								<div class="service-icon"><i class="fa fa-h-square" aria-hidden="true"></i></div>
 								<h3 class="title">Lorem ipsum dolor</h3>
 								<p class="description">
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium consequuntur.
+									Institution for health care providing treatment by specialised staff and equipment, and typically providing nursing care for longer-term patient stays.
 								</p>
 								<a href="#" class="new-btn-d br-2">Read More</a>
 							</div>
@@ -223,7 +208,7 @@
 								<div class="service-icon"><i class="fa fa-heart" aria-hidden="true"></i></div>
 								<h3 class="title">Lorem ipsum dolor</h3>
 								<p class="description">
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium consequuntur.
+									Improving patient care has become a priority for all health care providers with the overall objective of achieving a high degree of patient satisfaction. Greater awareness among the public, increasing demand for better care, keener competition, more health care regulation, the rise in medical malpractice litigation, and concern about poor outcomes are factors that contribute to this change.
 								</p>
 								<a href="#" class="new-btn-d br-2">Read More</a>
 							</div>
@@ -233,7 +218,7 @@
 								<div class="service-icon"><i class="fa fa-hospital-o" aria-hidden="true"></i></div>
 								<h3 class="title">Lorem ipsum dolor</h3>
 								<p class="description">
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium consequuntur.
+									Evidence-based design seeks to improve health care architecture. Proponents argue that buildings can promote healing when design decisions are based on evidence from scientific research. Although they believe that the environment influences recovery, advocates of evidence-based design usually stop short of claiming that good architecture directly cures disease.
 								</p>
 								<a href="#" class="new-btn-d br-2">Read More</a>
 							</div>
@@ -243,57 +228,7 @@
 								<div class="service-icon"><i class="fa fa-stethoscope" aria-hidden="true"></i></div>
 								<h3 class="title">Lorem ipsum dolor</h3>
 								<p class="description">
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium consequuntur.
-								</p>
-								<a href="#" class="new-btn-d br-2">Read More</a>
-							</div>
-						</div>
-						<div class="item">
-							<div class="serviceBox">
-								<div class="service-icon"><i class="fa fa-wheelchair" aria-hidden="true"></i></div>
-								<h3 class="title">Lorem ipsum dolor</h3>
-								<p class="description">
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium consequuntur.
-								</p>
-								<a href="#" class="new-btn-d br-2">Read More</a>
-							</div>
-						</div>
-						<div class="item">
-							<div class="serviceBox">
-								<div class="service-icon"><i class="fa fa-plus-square" aria-hidden="true"></i></div>
-								<h3 class="title">Lorem ipsum dolor</h3>
-								<p class="description">
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium consequuntur.
-								</p>
-								<a href="#" class="new-btn-d br-2">Read More</a>
-							</div>
-						</div>
-						<div class="item"> 
-							<div class="serviceBox">
-								<div class="service-icon"><i class="fa fa-medkit" aria-hidden="true"></i></div>
-								<h3 class="title">Lorem ipsum dolor</h3>
-								<p class="description">
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium consequuntur.
-								</p>
-								<a href="#" class="new-btn-d br-2">Read More</a>
-							</div>
-						</div>
-						<div class="item">
-							<div class="serviceBox">
-								<div class="service-icon"><i class="fa fa-user-md" aria-hidden="true"></i></div>
-								<h3 class="title">Lorem ipsum dolor</h3>
-								<p class="description">
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium consequuntur.
-								</p>
-								<a href="#" class="new-btn-d br-2">Read More</a>
-							</div>
-						</div>
-						<div class="item">
-							<div class="serviceBox">
-								<div class="service-icon"><i class="fa fa-ambulance" aria-hidden="true"></i></div>
-								<h3 class="title">Lorem ipsum dolor</h3>
-								<p class="description">
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium consequuntur.
+									“One of the essential qualities of the clinician is interest in humanity, for the secret of the care of the patient is in caring for the patient” 
 								</p>
 								<a href="#" class="new-btn-d br-2">Read More</a>
 							</div>
@@ -311,8 +246,8 @@
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="title-box">
-						<h2>Appointment</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+						<h2>Patient Data</h2>
+						<p>You can Register/Update/Delete here! . </p>
 					</div>
 				</div>
 			</div>
@@ -320,7 +255,7 @@
 				<div class="col-lg-6 col-md-6">
 					<div class="well-block">
                         <div class="well-title">
-                            <h2>Book an Appointment</h2>
+                            <h2>Choose your option</h2>
                         </div>
                         <form method="POST">
 							{% csrf_token %}
@@ -331,84 +266,6 @@
 									{{ form|crispy }}
 								</div>
                             </div>
-                                    <!-- <div class="form-group">
-                                        <label class="control-label" for="name">First Name</label>
-                                        <input id="name" name="name" type="text" placeholder="Name" class="form-control input-md">
-                                    </div>
-								</div>
-									<div class="col-md-6">
-										<div class="form-group">
-											<label class="control-label" for="name">Last Name</label>
-											<input id="name" name="name" type="text" placeholder="Name" class="form-control input-md">
-										</div>
-									</div>
-                            </div>
-
-							<div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label class="control-label" for="email">Gender</label>
-                                        <select id="time" name="time" class="form-control">
-                                            <option value="Male">Male</option>
-                                            <option value="Female">Female</option>
-                                            <option value="Others">Others</option>
-                                        </select>
-                                    </div>
-								</div>
-								
-									<div class="col-md-6">
-                                	    <div class="form-group">
-                                	        <label class="control-label" for="name">Age</label>
-                                	        <input id="name" name="name" type="text" placeholder="Name" class="form-control input-md">
-                                	    </div>
-									</div>
-								
-									<div class="col-md-12">
-										<div class="form-group">
-											<label class="control-label" for="appointmentfor">Disease Department</label>
-											<select id="appointmentfor" name="appointmentfor" class="form-control">
-												<option value="Choose Department">Choose Department</option>
-												<option value="Gynacology">Gynacology</option>
-												<option value="Dermatologist">Dermatologist</option>
-												<option value="Orthology">Orthology</option>
-												<option value="Anesthesiology">Anesthesiology</option>
-												<option value="Ayurvedic">Ayurvedic</option>
-											</select>
-										</div>
-									</div>
-								
-								<div class="col-md-12">
-                                    <div class="form-group">
-                                        <label class="control-label" for="name">Doctor's Name</label>
-                                        <input id="name" name="name" type="text" placeholder="Name" class="form-control input-md">
-                                    </div>
-								</div>
-								
-								<div class="col-md-12">
-                                    <div class="form-group">
-                                        <label class="control-label" for="name">Fees</label>
-                                        <input id="name" name="name" type="text" placeholder="Name" class="form-control input-md">
-                                    </div>
-								</div>
-								]
-								
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <label class="control-label" for="date">Medication started on date</label>
-                                        <input id="date" name="date" type="text" placeholder="Preferred Date" class="form-control input-md">
-                                    </div>
-                                </div> -->
-                                <!-- Select Basic
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label class="control-label" for="time">Preferred Time</label>
-                                        <select id="time" name="time" class="form-control">
-                                            <option value="8:00 to 9:00">8:00 to 9:00</option>
-                                            <option value="9:00 to 10:00">9:00 to 10:00</option>
-                                            <option value="10:00 to 1:00">10:00 to 1:00</option>
-                                        </select>
-                                    </div>
-                                </div> -->
                             
                                 <!-- Button -->
                                 <div class="col-md-12">
@@ -419,33 +276,6 @@
                             </div>
                         </form>
                         <!-- form end -->
-                    </div>
-				</div>
-				<div class="col-lg-6 col-md-6">
-					<div class="well-block">
-                        <div class="well-title">
-                            <h2>Why Appointment with Us</h2>
-                        </div>
-                        <div class="feature-block">
-                            <div class="feature feature-blurb-text">
-                                <h4 class="feature-title">24/7 Hours Available</h4>
-                                <div class="feature-content">
-                                    <p>Integer nec nisi sed mi hendrerit mattis. Vestibulum mi nunc, ultricies quis vehicula et, iaculis in magnestibulum.</p>
-                                </div>
-                            </div>
-                            <div class="feature feature-blurb-text">
-                                <h4 class="feature-title">Experienced Staff Available</h4>
-                                <div class="feature-content">
-                                    <p>Aliquam sit amet mi eu libero fermentum bibendum pulvinar a turpis. Vestibulum quis feugiat risus. </p>
-                                </div>
-                            </div>
-                            <div class="feature feature-blurb-text">
-                                <h4 class="feature-title">Low Price & Fees</h4>
-                                <div class="feature-content">
-                                    <p>Praesent eu sollicitudin nunc. Cras malesuada vel nisi consequat pretium. Integer auctor elementum nulla suscipit in.</p>
-                                </div>
-                            </div>
-                        </div>
                     </div>
 				</div>
 			</div>
@@ -460,7 +290,7 @@
 				<div class="col-lg-12">
 					<div class="title-box">
 						<h2>Gallery</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+						<p>See what we do. </p>
 					</div>
 				</div>
 			</div>
@@ -496,7 +326,8 @@
 					<div class="box-gallery">
 						{% load static %}
 						<img src="{% static 'patient_info/images/gallery-03.jpg' %}" alt="">
-						<div class="box-content">							
+						<div class="box-content">	
+							<h3 class="title">Lorem ipsum dolor</h3>
 							<ul class="icon">
 								{% load static %}
 								<li><a href="{% static 'patient_info/images/gallery-03.jpg' %}"><i class="fa fa-picture-o" aria-hidden="true"></i></a></li>								
@@ -507,7 +338,7 @@
 				<div class="col-md-3 col-sm-6">
 					<div class="box-gallery">
 						{% load static %}
-						<img src="{% static 'images/gallery-04.jpg' %}" alt="">
+						<img src="{% static 'patient_info/images/gallery-04.jpg' %}" alt="">
 						<div class="box-content">	
 							<h3 class="title">Lorem ipsum dolor</h3>
 							<ul class="icon">
@@ -581,7 +412,7 @@
 				<div class="col-lg-12">
 					<div class="title-box">
 						<h2>Our Doctor</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+						<p>A good doctor is not one who cures the most because in many specialties recovery is not a frequent outcome. It is not one who makes the best diagnosis because in many cases of self limited or incurable disorders the precise and timely diagnosis does not make a great difference for the patient. </p>
 					</div>
 				</div>
 			</div>
@@ -595,7 +426,7 @@
                         </div>
                         <div class="team-content">
                             <h3 class="title">Williamson</h3>
-                            <span class="post">web developer</span>
+                            <span class="post">Radiation Oncology</span>
                             <ul class="social">
                                 <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
                                 <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
@@ -613,8 +444,8 @@
                             <img src="{% static 'patient_info/images/img-2.jpg' %}" alt="">
                         </div>
                         <div class="team-content">
-                            <h3 class="title">kristina</h3>
-                            <span class="post">Web Designer</span>
+                            <h3 class="title">Kristina</h3>
+                            <span class="post">Paediatric Haematology, Oncology and BMT</span>
                             <ul class="social">
                                 <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
                                 <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
@@ -633,7 +464,7 @@
                         </div>
                         <div class="team-content">
                             <h3 class="title">Steve Thomas</h3>
-                            <span class="post">web developer</span>
+                            <span class="post">Surgical Oncology</span>
                             <ul class="social">
                                 <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
                                 <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
@@ -650,70 +481,7 @@
 	
 	<!-- End Team -->
 	
-	<!-- Start Blog -->
-	<div id="blog" class="blog-box">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="title-box">
-						<h2>Blog</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-lg-4 col-md-6 col-sm-12">
-					<div class="blog-inner">
-						<div class="blog-img">
-							{% load static %}
-							<img class="img-fluid" src="{% static 'patient_info/images/blog-img-01.jpg' %}" alt="" />
-						</div>
-						<div class="item-meta">
-							<a href="#"><i class="fa fa-comments-o"></i> 5 Comment </a>
-							<a href="#"><i class="fa fa-user-o"></i> Admin</a>
-							<span class="dti">25 July 2018</span>
-						</div>
-						<h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
-						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard </p>
-						<a class="new-btn-d br-2" href="#">Read More <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 col-sm-12">
-					<div class="blog-inner">
-						<div class="blog-img">
-							{% load static %}
-							<img class="img-fluid" src="{% static 'patient_info/images/blog-img-02.jpg' %}" alt="" />
-						</div>
-						<div class="item-meta">
-							<a href="#"><i class="fa fa-comments-o"></i> 5 Comment </a>
-							<a href="#"><i class="fa fa-user-o"></i> Admin</a>
-							<span class="dti">25 July 2018</span>
-						</div>
-						<h2>Proin vel sem ut lorem rhoncus lacinia. </h2>
-						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard </p>
-						<a class="new-btn-d br-2" href="#">Read More <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 col-sm-12">
-					<div class="blog-inner">
-						<div class="blog-img">
-							{% load static %}
-							<img class="img-fluid" src="{% static 'patient_info/images/blog-img-03.jpg' %}" alt="" />
-						</div>
-						<div class="item-meta">
-							<a href="#"><i class="fa fa-comments-o"></i> 5 Comment </a>
-							<a href="#"><i class="fa fa-user-o"></i> Admin</a>
-							<span class="dti">25 July 2018</span>
-						</div>
-						<h2>Aliquam egestas magna a malesuada rutrum. </h2>
-						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard </p>
-						<a class="new-btn-d br-2" href="#">Read More <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- End Blog -->
+	
 	
 	<!-- Start Contact -->
 	<div id="contact" class="contact-box">
@@ -722,7 +490,6 @@
 				<div class="col-lg-12">
 					<div class="title-box">
 						<h2>Contact us</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
 					</div>
 				</div>
 			</div>
@@ -730,77 +497,45 @@
 				
 				<div class="col-lg-12 col-xs-12">
 				  <div class="contact-block">
-					<form id="contactForm">
-					  <div class="row">
-						<div class="col-md-6">
-							<div class="form-group">
-								<input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required data-error="Please enter your name">
-								<div class="help-block with-errors"></div>
-							</div>                                 
-						</div>
-						<div class="col-md-6">
-							<div class="form-group">
-								<input type="text" placeholder="Your Email" id="email" class="form-control" name="name" required data-error="Please enter your email">
-								<div class="help-block with-errors"></div>
-							</div> 
-						</div>
-						<div class="col-md-12">
-							<div class="form-group">
-								<input type="text" placeholder="Your number" id="number" class="form-control" name="number" required data-error="Please enter your number">
-								<div class="help-block with-errors"></div>
-							</div> 
-						</div>
-						<div class="col-md-12">
-							<div class="form-group"> 
-								<textarea class="form-control" id="message" placeholder="Your Message" rows="8" data-error="Write your message" required></textarea>
-								<div class="help-block with-errors"></div>
+					<div class="col-lg-12 col-xs-12">
+						<div class="left-contact">
+							<h2>Address</h2>
+							<div class="media cont-line">
+								<div class="media-left icon-b">
+									<i class="fa fa-location-arrow" aria-hidden="true"></i>
+								</div>
+								<div class="media-body dit-right">
+									<h4>Address</h4>
+									<p>Bangalore</p>
+								</div>
 							</div>
-							<div class="submit-button text-center">
-								<button class="btn btn-common" id="submit" type="submit">Send Message</button>
-								<div id="msgSubmit" class="h3 text-center hidden"></div> 
-								<div class="clearfix"></div> 
+							<div class="media cont-line">
+								<div class="media-left icon-b">
+									<i class="fa fa-envelope" aria-hidden="true"></i>
+								</div>
+								<div class="media-body dit-right">
+									<h4>Email</h4>
+									<a href="#">demoinfo@gmail.com</a><br>
+									<a href="#">demoinfo@gmail.com</a>
+								</div>
+							</div>
+							<div class="media cont-line">
+								<div class="media-left icon-b">
+									<i class="fa fa-volume-control-phone" aria-hidden="true"></i>
+								</div>
+								<div class="media-body dit-right">
+									<h4>Phone Number</h4>
+									<a href="#">12345 67890</a><br>
+									<a href="#">12345 67890</a>
+								</div>
 							</div>
 						</div>
-					  </div>            
-					</form>
+					</div>
 				  </div>
 				</div>
 				
 				
-				<div class="col-lg-12 col-xs-12">
-					<div class="left-contact">
-						<h2>Address</h2>
-						<div class="media cont-line">
-							<div class="media-left icon-b">
-								<i class="fa fa-location-arrow" aria-hidden="true"></i>
-							</div>
-							<div class="media-body dit-right">
-								<h4>Address</h4>
-								<p>Fleming 196 Woodside Circle Mobile, FL 36602</p>
-							</div>
-						</div>
-						<div class="media cont-line">
-							<div class="media-left icon-b">
-								<i class="fa fa-envelope" aria-hidden="true"></i>
-							</div>
-							<div class="media-body dit-right">
-								<h4>Email</h4>
-								<a href="#">demoinfo@gmail.com</a><br>
-								<a href="#">demoinfo@gmail.com</a>
-							</div>
-						</div>
-						<div class="media cont-line">
-							<div class="media-left icon-b">
-								<i class="fa fa-volume-control-phone" aria-hidden="true"></i>
-							</div>
-							<div class="media-body dit-right">
-								<h4>Phone Number</h4>
-								<a href="#">12345 67890</a><br>
-								<a href="#">12345 67890</a>
-							</div>
-						</div>
-					</div>
-				</div>
+				
 				
 				
 			</div>
@@ -808,37 +543,14 @@
 	</div>
 	<!-- End Contact -->
 	
-	<!-- Start Subscribe -->
-	<div class="subscribe-box">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="subscribe-inner text-center clearfix">
-						<h2>Subscribe</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-						<form action="#" method="post">
-							<div class="form-group">
-								<input class="form-control-1" id="email-1" name="email" placeholder="Email Address" required="" type="text">
-							</div>
-							<div class="form-group">
-								<button type="submit" class="new-btn-d br-2">
-									Subscribe
-								</button>
-							</div>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- End Subscribe -->
+	
 	
 	<!-- Start Footer -->
 	<footer class="footer-box">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12">
-					<p class="footer-company-name">All Rights Reserved. &copy; 2018 <a href="#">Health Lab</a> Design By : <a href="https://html.design/">html design</a></p>
+					<p class="footer-company-name"><a href="#">Health Lab</a> Project By : Dakshta Tomar</a></p>
 				</div>
 			</div>
 		</div>
